@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SWILL Messenger | Пользователь</title>
+</head>
+<body style="font-family: Arial; padding: 20px;">
+    <h1>🔒 SWILL Messenger</h1>
+    <div id="auth-section">
+        <h3>Регистрация / Вход</h3>
+        <input type="email" id="email" placeholder="Ваш email">
+        <input type="password" id="password" placeholder="Пароль">
+        <button onclick="signUp()">Зарегистрироваться</button>
+        <button onclick="signIn()">Войти</button>
+        <p id="auth-status"></p>
+    </div>
+
+    <div id="chat-section" style="display:none;">
+        <h3>✉️ Чат</h3>
+        <input type="text" id="message" placeholder="Ваше сообщение">
+        <button onclick="sendMessage()">Отправить</button>
+        <div id="messages" style="border:1px solid #ccc; height:300px; overflow-y:scroll; padding:10px; margin-top:10px;"></div>
+        <p><a href="admin.html">⚙️ Панель администратора</a></p>
+    </div>
+
+    <!-- ВНИМАНИЕ: ЭТИХ СТРОК ДОЛЖНО БЫТЬ РОВНО ДВЕ! -->
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+</body>
+</html>
